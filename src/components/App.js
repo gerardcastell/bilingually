@@ -6,6 +6,7 @@ import { flexbox } from "@material-ui/system";
 import TopTabs from "./TopTabs";
 import TopBar from "./TopBar";
 import NestedList from "./NestedList";
+import SocialStoryCard from "./SocialStoryCard";
 import globalTheme from "../themes/globalTheme";
 import Typography from "@material-ui/core/Typography";
 
@@ -23,10 +24,8 @@ function App() {
       <div style={AppStyle}>
         <TopBar />
         <TopTabs />
-        <Typography variant="overline" align="center">
-          <p></p>
-        </Typography>
-        <NestedList />
+        <SocialStoryCard />
+        {/* <NestedList /> */}
       </div>
     </ThemeProvider>
   );

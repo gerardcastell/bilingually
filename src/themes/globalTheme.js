@@ -10,11 +10,11 @@ let theme = createMuiTheme({
   },
   status: {
     danger: "orange"
-  },
-  typography: {
-    fontFamily: ["Roboto"],
-    fontSize: 12
   }
+  // typography: {
+  //   fontFamily: ["Roboto"]
+  //   fontSize: 12
+  // }
 });
 
 theme = responsiveFontSizes(theme);
