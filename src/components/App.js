@@ -3,12 +3,12 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { flexbox } from "@material-ui/system";
 
-import TopTabs from "./TopTabs";
+import TopTabs from "../views/mainView/components/TopTabs";
 import TopBar from "./TopBar";
-import NestedList from "./NestedList";
+import NestedList from "../views/mainView/components/NestedList";
 import SocialStoryCard from "./SocialStoryCard";
 import globalTheme from "../themes/globalTheme";
-import Typography from "@material-ui/core/Typography";
+import MainView from "../views/mainView/MainView.js";
 
 const AppStyle = {
   position: "absolute",
@@ -22,9 +22,10 @@ function App() {
   return (
     <ThemeProvider theme={globalTheme}>
       <div style={AppStyle}>
-        <TopBar />
-        <TopTabs />
-        <SocialStoryCard />
+        <MainView />
+        {/* <TopBar /> */}
+        {/* <TopTabs />
+        <SocialStoryCard /> */}
         {/* <NestedList /> */}
       </div>
     </ThemeProvider>

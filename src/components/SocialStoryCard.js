@@ -59,7 +59,10 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 0
   },
   gridDividerRoot: {
-    paddingTop: 0
+    // padding: theme.spacing(0)
+  },
+  subtitleRoot: {
+    paddingBot: "12px"
   }
 }));
 
@@ -128,7 +131,7 @@ export default function RecipeReviewCard() {
             <ArrowForwardIosIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title="Social Story 1 Example"
         // subheader="September 14, 2016"
         classes={{ root: classes.cardHeaderRoot }}
       />
@@ -152,11 +155,13 @@ export default function RecipeReviewCard() {
         <CardContent classes={{ root: classes.cardContentRoot }}>
           <Grid container spacing={3}>
             <Grid xs={12} item>
-              <Typography variant="subtitle1">Preview</Typography>
-              <CircularProgress />
+              <Typography variant="subtitle1" paragraph>
+                Preview
+              </Typography>
+              <CircularProgress size={25} />
             </Grid>
-            <Grid xs={12} item classes={{ root: classes.gridDividerRoot }}>
-              <Divider variant="middle" />
+            <Grid xs item classes={{ root: classes.gridDividerRoot }}>
+              <Divider variant="fullWidth" />
             </Grid>
             <Grid xs={12} item>
               <Typography variant="subtitle1">Description</Typography>
