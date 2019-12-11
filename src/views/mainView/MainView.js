@@ -1,22 +1,26 @@
 import React from "react";
 
-import { ThemeProvider } from "@material-ui/core/styles";
-import { flexbox } from "@material-ui/system";
-
-import TopTabs from "./components/TopTabs";
+import Tabs from "./components/Tabs";
 import TopBar from "components/TopBar";
-import NestedList from "./components/NestedList";
-import SocialStoryCard from "components/SocialStoryCard";
+import { makeStyles } from "@material-ui/core/styles";
 
-function App() {
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: theme.palette.background.paper,
+    width: "100%",
+    height: "100%",
+    overflow: "hidden"
+  }
+}));
+
+const MainView = () => {
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.root}>
       <TopBar />
-      <TopTabs />
-      <SocialStoryCard />
-      {/* <NestedList /> */}
+      <Tabs />
     </div>
   );
-}
+};
 
-export default App;
+export default MainView;

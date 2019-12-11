@@ -10,8 +10,8 @@ import Box from "@material-ui/core/Box";
 import ListIcon from "@material-ui/icons/List";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import SearchIcon from "@material-ui/icons/Search";
-import { minHeight } from "@material-ui/system";
 
+import CardsList from "./CardsList";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -45,7 +45,8 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: "100%"
+    width: "100%",
+    height: "100%"
   },
   label: {
     textTransform: "capitalize",
@@ -114,9 +115,10 @@ export default function FullWidthTabs() {
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
+        style={{ height: "100%" }}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
+          <CardsList />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           Item Two
