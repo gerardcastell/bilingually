@@ -12,6 +12,9 @@ import FilterListIcon from "@material-ui/icons/FilterList";
 import SearchIcon from "@material-ui/icons/Search";
 
 import CardsList from "./CardsList";
+import SearchBar from "components/SearchBar";
+import FilterBar from "components/FilterBar";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -115,16 +118,18 @@ export default function FullWidthTabs() {
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
-        style={{ height: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           <CardsList />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+          <SearchBar />
+          <CardsList />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          {/* <FilterBar /> */}
+          <CardsList />
         </TabPanel>
       </SwipeableViews>
     </div>
