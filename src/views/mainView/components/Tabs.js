@@ -128,7 +128,7 @@ export default function FullWidthTabs() {
           <CardsList />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          {/* <FilterBar /> */}
+          <FilterBar />
           <CardsList />
         </TabPanel>
       </SwipeableViews>
