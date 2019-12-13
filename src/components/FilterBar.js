@@ -20,24 +20,6 @@ export default function Tags() {
 
   return (
     <div className={classes.root}>
-      {/* <Autocomplete
-        multiple
-        id="tags-outlined"
-        options={top100Films}
-        getOptionLabel={option => option.title}
-        // defaultValue={[top100Films[13]]}
-        filterSelectedOptions
-        renderInput={params => (
-          <TextField
-            {...params}
-            variant="outlined"
-            label="Filter"
-            placeholder="Write a tag..."
-            fullWidth
-          />
-        )}
-      /> */}
-
       <Autocomplete
         multiple
         id="tags-filled"

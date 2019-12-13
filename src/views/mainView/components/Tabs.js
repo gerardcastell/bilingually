@@ -74,8 +74,6 @@ export default function FullWidthTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    window.scrollTo(0, 0);
-    console.log("epaa");
   };
 
   const handleChangeIndex = index => {
