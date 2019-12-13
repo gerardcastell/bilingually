@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 import globalTheme from "themes/globalTheme";
-import MainView from "views/mainView/MainView.js";
+import MainView from "views/mainView/MainView";
 
 const AppStyle = {
   position: "absolute",

@@ -7,7 +7,6 @@ import Chip from "@material-ui/core/Chip";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
@@ -34,9 +33,6 @@ const useStyles = makeStyles(theme => ({
   },
   expandOpen: {
     transform: "rotate(180deg)"
-  },
-  avatar: {
-    backgroundColor: red[500]
   },
   chipRoot: {
     margin: theme.spacing(0.3),
@@ -83,44 +79,24 @@ export default function RecipeReviewCard() {
     // { key: 4, label: "Vue.js", color: "black" }
   ]);
   const getChipData = () => {
-    if (chipData.length > 3) {
-      return (
-        <React.Fragment>
-          {chipData.map(data => {
-            return (
-              <Chip
-                key={data.key}
-                label={data.label}
-                classes={{
-                  root: classes.chipRoot,
-                  labelSmall: classes.chipLabelSmall
-                }}
-                style={{ backgroundColor: data.color }}
-                // size="small"
-              />
-            );
-          })}
-        </React.Fragment>
-      );
-    } else {
-      return (
-        <React.Fragment>
-          {chipData.map(data => {
-            return (
-              <Chip
-                key={data.key}
-                label={data.label}
-                classes={{
-                  root: classes.chipRoot,
-                  labelSmall: classes.chipLabelSmall
-                }}
-                // size="small"
-              />
-            );
-          })}
-        </React.Fragment>
-      );
-    }
+    return (
+      <React.Fragment>
+        {chipData.map(data => {
+          return (
+            <Chip
+              key={data.key}
+              label={data.label}
+              classes={{
+                root: classes.chipRoot,
+                labelSmall: classes.chipLabelSmall
+              }}
+              style={{ backgroundColor: data.color }}
+              // size="small"
+            />
+          );
+        })}
+      </React.Fragment>
+    );
   };
 
   return (

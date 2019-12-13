@@ -13,6 +13,7 @@ import SearchIcon from "@material-ui/icons/Search";
 
 import CardsList from "./CardsList";
 import SearchBar from "components/SearchBar";
+import SearchBarNew from "components/SearchBarNew";
 import FilterBar from "components/FilterBar";
 
 function TabPanel(props) {
@@ -57,7 +58,9 @@ const useStyles = makeStyles(theme => ({
   },
 
   tabsBar: {
-    height: 60
+    height: 60,
+    position: "relative",
+    zIndex: 2
   },
   tabRoot: {
     padding: 0
@@ -71,6 +74,8 @@ export default function FullWidthTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    window.scrollTo(0, 0);
+    console.log("epaa");
   };
 
   const handleChangeIndex = index => {
@@ -124,7 +129,8 @@ export default function FullWidthTabs() {
           <CardsList />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <SearchBar />
+          {/* <SearchBar /> */}
+          <SearchBarNew />
           <CardsList />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>

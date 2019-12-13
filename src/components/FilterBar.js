@@ -61,9 +61,9 @@ export default function Tags() {
         renderInput={params => (
           <TextField
             {...params}
-            variant="filled"
-            label="freeSolo"
-            placeholder="Favorites"
+            variant="outlined"
+            label="Filter"
+            placeholder="Write a tag..."
             fullWidth
           />
         )}

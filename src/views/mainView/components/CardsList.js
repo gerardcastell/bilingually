@@ -3,21 +3,18 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
-import InboxIcon from "@material-ui/icons/Inbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
 
 import SocialStoryCard from "components/SocialStoryCard";
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
-    // maxWidth: 360,
     height: "100%",
     overflow: "auto",
     backgroundColor: theme.palette.background.paper
+  },
+  listItemRoot: {
+    justifyContent: "center"
   }
 }));
 
@@ -27,19 +24,19 @@ export default function SimpleList() {
   return (
     <div className={classes.root}>
       <List disablePadding>
-        <ListItem disableGutters>
+        <ListItem disableGutters className={classes.listItemRoot}>
           <SocialStoryCard />
         </ListItem>
-        <ListItem disableGutters>
+        <ListItem disableGutters className={classes.listItemRoot}>
           <SocialStoryCard />
         </ListItem>
-        <ListItem disableGutters>
+        <ListItem disableGutters className={classes.listItemRoot}>
           <SocialStoryCard />
         </ListItem>
-        <ListItem disableGutters>
+        <ListItem disableGutters className={classes.listItemRoot}>
           <SocialStoryCard />
         </ListItem>
-        <ListItem disableGutters>
+        <ListItem disableGutters className={classes.listItemRoot}>
           <SocialStoryCard />
         </ListItem>
       </List>
